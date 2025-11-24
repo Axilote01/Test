@@ -1,0 +1,205 @@
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+    }
+    header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    }
+
+    .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    }
+
+    .social-icon img {
+    width: 28px;
+    height: 28px;
+    }
+
+    .theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;       
+    color: inherit;
+    padding: 5px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: auto;
+    }
+    .section {
+      margin-top: 40px;
+    }
+    .section h2 {
+      margin-bottom: 15px;
+    }
+    .intro-box {
+      display: flex;
+      gap: 20px;
+      background: #e8ffe8;
+      padding: 20px;
+      border-radius: 12px;
+      align-items: center;
+    }
+    .intro-box img {
+      width: 180px;
+      height: 180px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      border: 2px dashed #bbb;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      margin-bottom: 10px;
+      opacity: 0;
+      transform: scale(0.85) translateY(10px);
+      transition: transform 0.35s ease;
+      animation: photoFade 0.9s ease forwards;
+      animation-delay: 0.4s;
+    }
+      body.dark {
+      background: #1a1a1a;
+      color: white;
+    }
+    body.dark .intro-box {
+      background: #2f2f2f;
+    }
+    body.dark .card {
+      background: #2b2b2b;
+      border-color: #555;
+    }
+    body.dark a svg {
+      stroke: white;
+    }
+    /* animasi buat transisi tema */
+*   {
+    transition: background-color 0.35s ease, 
+              color 0.35s ease, 
+              border-color 0.35s ease;
+    }
+
+    /* mode Gelap */
+    body.dark {
+      background-color: #0f0f0f;
+      color: #f1f1f1;
+    }
+
+    /* header background berubah smooth anjay */
+    header {
+      transition: background 0.35s ease;
+    }
+
+    /* toggle animasi */
+    .theme-toggle {
+      position: relative;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+        .theme-toggle:hover {
+        transform: rotate(20deg) scale(1.1);
+    }
+
+    body.dark .social-icon img {
+      filter: invert(1) brightness(1.2);
+    }
+
+    /* animasi icon */
+    .toggle-icon {
+      display: inline-block;
+      transition: transform 0.35s ease, opacity 0.35s ease;
+    }
+
+    body.dark .toggle-icon {
+      transform: rotate(180deg) scale(1.2);
+      opacity: 0.9;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      animation: fadeInUp 0.7s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .photo-animate {
+      opacity: 0;
+      transform: scale(0.85) translateY(10px);
+      animation: photoFade 0.9s ease forwards;
+      animation-delay: 0.3s;
+    
+    }
+
+    @keyframes photoFade {
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    /* animasi hover buat profile foto */
+    .photo-animate:hover {
+      transform: scale(1.05) translateY(0) !important;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    @keyframes photoFade {
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+    .photo:hover image {
+      opacity: 0;
+      transform: scale(0.85) translateY(10px);
+      animation: photoFade 0.9s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
