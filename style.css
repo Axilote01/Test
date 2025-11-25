@@ -164,6 +164,21 @@
         transform: translateY(0);
       }
     }
+    @media (max-width: 768px) {
+      .intro-box {
+        flex-direction: column;
+        text-align: center;
+      }
+      .intro-box img {
+        margin-bottom: 15px;
+      }
+      header {
+        padding: 15px 20px;
+      }
+      .header-right {
+        gap: 10px;
+      }
+    }
 
     .photo-animate {
       opacity: 0;
